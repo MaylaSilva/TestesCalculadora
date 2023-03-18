@@ -1,13 +1,17 @@
 package model;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import service.CalculadoraService;
 
 public class TrianguloTest {
-    CalculadoraService calculadoraService;
-    @Before
-    public void before(){
-        calculadoraService = new CalculadoraService();
+    @Test
+    public void deveCriarTrianguloCorretamente(){
+        //Given: um triângulo
+        Triangulo triangulo = new Triangulo(7,14);
+
+        //Then: deve criar um triângulo
+        Assert.assertTrue(triangulo.getAltura() == 14);
     }
 }
